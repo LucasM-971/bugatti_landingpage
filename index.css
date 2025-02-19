@@ -1,0 +1,462 @@
+
+body {
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;  
+  font-family: "Gothic A1", serif;
+}
+
+/* Vidéo de fond, nommé image car c'était une image a la base*/
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* Utilise 100% de la largeur de la fenêtre */
+  height: 100vh;  /* Utilise 100% de la hauteur de la fenêtre */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* La vidéo couvre entièrement le conteneur et est recadrée si besoin */
+}
+
+/* Text qui est par dessus la vidéo background */
+
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  margin-left: 240px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: "Gothic A1", serif;
+  font-weight: 200;
+  font-style: normal;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUp 0.7s ease-out forwards; 
+}
+  
+.text-overlay h1 {
+  font-size: 158px;
+  margin: 0 0 10px;
+}
+  
+  /* Bouton qui est par dessus la vidéo background, debug car l'id ne le centrais pas au milieu de la page*/
+  
+.btn-debug{
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  padding: 12px 25px;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 100px;
+  }
+  
+.btn-debug:hover {
+  border-color: #d4d4d4;
+  color: #d4d4d4;
+}
+  
+/* Animation au lancement de la page, fait a l'aide de ChatGPT*/
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* header */
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  margin-top: -10px;
+  background: rgba(255, 255, 255, 0); 
+  backdrop-filter: blur(0px);
+  transition: transform 0.3s ease, opacity 0.3s ease, backdrop-filter 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+}
+
+/* Animation , fait a l'aide de ChatGPT*/
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.visible {
+  background: rgba(56, 53, 53, 0.7);
+  backdrop-filter: blur(20px);
+  height: 40px; 
+  transform: translateY(0);
+}
+
+
+
+
+header ul {
+  position: absolute;
+  display: flex;
+  list-style: none;
+  margin-top: 15px;
+  margin-left: 240px;
+  padding: 0;
+  max-width: 90%;
+  overflow: hidden;    
+}
+header ul li {
+  margin: 0 90px;
+  display: block;
+}
+ul img {
+width: 30px; 
+height: auto; 
+}
+
+ul li img {
+display: inline-block; 
+}
+
+header ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-left: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul li a:hover {
+color: grey; 
+}
+
+/* Section en dessous de l'aniamtion de la vidéo background; débug car 
+Il y avait un probleme avec la marge du haut et du bas */
+
+.debug-section{
+  margin-top: 950px;
+  background-color: #050505;
+  width: auto;
+  height: 1300px;
+}
+
+/* ID des sections */
+  
+#presentation-voiture {
+  background-color: #050505;
+  width: auto;
+  height: 1300px;
+  
+}
+
+/* Un deuxième overlay pour la vidéo*/
+
+.txt-overlay {
+  top: 165%;
+  position: absolute;
+  margin-left: 560px;
+  text-align: center;
+  color: white;
+  font-family: "Gothic A1", serif;
+  font-weight: 300;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.txt-overlay h4 {
+  font-size: 33px;
+  margin: 0 0 10px;
+}
+
+/* Vidéo*/
+
+.video-voiture {
+  width: 1660px;
+  height: 880px;
+  margin-left: 115px;
+  margin-top: 140px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.video-voiture video {
+  width: 1660px;
+  /* La hauteur est gérée par le conteneur */
+}
+
+
+/* ID pour tout les h3 et p*/
+
+#h3-presentation{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; 
+  font-size: 42px;
+  text-align: center;
+  font-style:inherit;
+  font-weight: bold;
+}
+
+#p-bugatti{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 50; 
+  margin-top: -20px;
+}
+
+/* balise ul nommé brand*/
+
+.brand {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 0;
+
+}
+
+.photo-brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.photo-brand {
+  overflow: hidden;
+}
+.photo-brand img {
+  display: block;
+  width: auto;
+  height: 680px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.photo-brand:hover img {
+  transform: scale(1.05);
+}
+
+#btn-presentation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  padding: 14px 170px;
+  cursor: pointer;
+}
+
+#btn-presentation:hover {
+  border-color: #d4d4d4;
+  color: #d4d4d4;
+}
+
+/* Section voiture Luxe avec elle aussi des balsies ul*/
+
+.voiture-luxe{
+  margin-top: -150px;
+  min-height: 2650px;
+}
+
+.collection {
+  display: flex;
+  gap: 34px;
+  margin-right: 60px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+#photo-collection {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+#photo-collection img {  
+  height: 720px;
+  width: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#photo-collection:hover img {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  font-family: "Allura", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+#btn-collection {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#btn-collection:hover {
+  border-color: #d4d4d4;
+  color: #d4d4d4;
+}
+
+/* Un rectangle gris foncé, par dessus la section*/
+
+.rectangle {
+  background-color: #161515;
+  display: flex; 
+  align-items: center; 
+  margin-top: 20px;
+  margin-left: 80px;
+  max-width: 1740px;
+}
+
+.rectangle img {
+  width: auto;
+  height: 850px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.rectangle:hover img {
+  transform: scale(1.05);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px; 
+}
+
+.h3-rec {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+.p-rec {
+  font-size: 18px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+
+
+#btn-transparent{
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  padding: 12px 25px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+#btn-transparent:hover{
+  border-color: #d4d4d4;
+  color: #d4d4d4;
+}
+
+header .text-overlay{
+  margin-left: 250px ;
+}
+
+/*Footer du site */
+
+footer {
+  background-color: #0c0c0c ;
+  color: #f0f5f9;
+  padding: 2rem;      
+  clear: both; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+#footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+}
+
