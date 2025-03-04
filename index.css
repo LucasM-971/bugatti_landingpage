@@ -48,7 +48,7 @@ body {
   margin: 0 0 10px;
 }
   
-  /* Bouton qui est par dessus la vidéo background, debug car l'id ne le centrais pas au milieu de la page*/
+/* Bouton qui est par dessus la vidéo background, debug car l'id ne le centrais pas au milieu de la page*/
   
 .btn-debug{
   border: 1px solid #ffffff;
@@ -93,15 +93,13 @@ body {
 
 header {
   position: fixed; 
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 15px 20px;
   margin-top: -10px;
   background: rgba(255, 255, 255, 0); 
   backdrop-filter: blur(0px);
-  transition: transform 0.3s ease, opacity 0.3s ease, backdrop-filter 0.3s ease, background 0.3s ease;
-  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease, backdrop-filter 0.3s ease; 
+  z-index: 1000; 
 }
 
 /* Animation , fait a l'aide de ChatGPT*/
@@ -134,14 +132,7 @@ header ul li {
   margin: 0 90px;
   display: block;
 }
-ul img {
-width: 30px; 
-height: auto; 
-}
 
-ul li img {
-display: inline-block; 
-}
 
 header ul a {
   text-decoration: none;
@@ -185,7 +176,6 @@ Il y avait un probleme avec la marge du haut et du bas */
   color: white;
   font-family: "Gothic A1", serif;
   font-weight: 300;
-  font-style: normal;
   cursor: pointer;
 }
 
@@ -203,14 +193,10 @@ Il y avait un probleme avec la marge du haut et du bas */
   margin-top: 140px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.video-voiture video {
-  width: 1660px;
-  
-}
+
 
 
 /* ID pour tout les h3 et p*/
@@ -240,28 +226,29 @@ Il y avait un probleme avec la marge du haut et du bas */
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 36px;
-  padding: 0;
+  gap: 35px;
+
 
 }
 
 .photo-brand {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   cursor: pointer;
+  overflow: hidden;
+  width: 520px;
+  height: 715px;
 }
 
-.photo-brand {
-  overflow: hidden;
-}
+
 .photo-brand img {
   display: block;
-  width: auto;
-  height: 680px;
+  width: 100%;
+  height: 100%; 
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  filter:brightness(70%) ;
 
 }
 
@@ -269,17 +256,29 @@ Il y avait un probleme avec la marge du haut et du bas */
   transform: scale(1.05);
 }
 
+.maison-name {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 35px;
+
+}
+
 #btn-presentation {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid #ffffff;
-  background-color: transparent;
-  color: white;
-  padding: 14px 170px;
-  cursor: pointer;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 14px 40px;
+  width: 80%;
+  font-size: 12px;
 }
+
 
 #btn-presentation:hover {
   border-color: #d4d4d4;
@@ -299,13 +298,13 @@ Il y avait un probleme avec la marge du haut et du bas */
   margin-right: 60px;
   margin-top: 40px;
   justify-content: center;
-  align-items: center;
+
 }
 
 #photo-collection {
   position: relative;
   overflow: hidden;
-  text-align: center;
+
 }
 
 #photo-collection img {  
@@ -323,16 +322,15 @@ Il y avait un probleme avec la marge du haut et du bas */
 .brand-name {
   font-family: "Allura", serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 100px;
   color: white;
   position: absolute;
-  top: 20px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 5px 15px;
-  border-radius: 5px;
 }
+
+
 
 #btn-collection {
   position: absolute;
@@ -375,16 +373,13 @@ Il y avait un probleme avec la marge du haut et du bas */
   cursor: pointer;
 }
 
-.rectangle:hover img {
-  transform: scale(1.05);
-}
 
 .text-content {
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  margin-left: 300px; 
+  margin-left: 20px; 
 }
 
 .h3-rec {
