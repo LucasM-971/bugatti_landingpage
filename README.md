@@ -1,6 +1,7 @@
 ﻿# bugatti landing page 
 
  "Ce projet est une reproduction à des fins d’apprentissage et n’a aucun lien officiel avec Bugatti"
+ 
 #1 <-------------UTILISATION------------->
 
 Pour pouvoir utiliser le site en entier vouds devez Extraire tout le fhicer ZIP que vous venez de télécharger
