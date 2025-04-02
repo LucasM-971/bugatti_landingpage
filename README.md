@@ -1,13 +1,16 @@
 ﻿# bugatti landing page 
 
- "Ce projet est une reproduction à des fins d’apprentissage et n’a aucun lien officiel avec Bugatti"
+ > Ce projet est une reproduction à des fins d’apprentissage et n’a aucun lien officiel avec Bugatti
  
-#1 <-------------UTILISATION------------->
+## Utilistaion
 
-Pour pouvoir utiliser le site en entier vouds devez Extraire tout le fhicer ZIP que vous venez de télécharger
+1. Installer le fichier ZIP ou utiliser la commande suivante  `` git clone https://github.com/LucasM-971/bugatti_landingpage.git ``
+2. Exécuter le fichier nommé Index.html
 
-2# <-------------CREATION------------->
+## Fonctionnalité
+- ✅ Bonne sémentique
+- ✅ Code perfomrent
+- ✅ Animation
+- ❌ Pas de responsive
 
-Pour pouvoir faire ce site, je me suis basé sur celui de bugatti, je tiens a préciser que ChatGPT a été utilisé dans le cas 
-des animations JavaScript
 
